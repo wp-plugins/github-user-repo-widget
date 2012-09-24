@@ -1,12 +1,10 @@
-=== GitHub User Repo Widget Extended ===
+=== GitHub User Repo Widget ===
 Contributors: jaredatch
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AD8KTWTTDX9JL
 Tags: github, widget, widget-only
 Requires at least: 3.4
 Tested up to: 3.5
 Stable tag: trunk
-
-~Current Version:0.2~
  
 A simple widget that will show a list of repos for a specified GitHub user.
 
