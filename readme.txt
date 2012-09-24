@@ -12,8 +12,6 @@ A simple widget that will show a list of repos for a specified GitHub user.
 
 A simple widget that will show a list of repos for a specified GitHub user. Optionally can display a GitHub follow badge as well.
 
-Note: This plugin users GitHub.com for updates instead of WordPress.org. If you install it from WordPress.org an newer version may be available from GitHub. If so, you will prompted that an update is available and you can update the plugin through the dashboard like normal.
-
 == Installation ==
 
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
