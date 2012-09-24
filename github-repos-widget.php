@@ -3,7 +3,7 @@
  * Plugin Name: GitHub User Repo Widget
  * Plugin URI: https://github.com/jaredatch/github-user-repo-widget/
  * Description: A simple widget that will show a list of repos for a specified GitHub user. Optionally can display a GitHub follow badge as well.
- * Version: 0.3
+ * Version: 1.0.0
  * Author: Jared Atchison
  * Author URI: http://jaredatchison.com 
  *
@@ -188,41 +188,4 @@ class ja_github_repo_Widget extends WP_Widget {
 		<?php
 	}
 }
-
 add_action( 'widgets_init', create_function( '', "register_widget('ja_github_repo_Widget');" ) );
-
-/**
- * Github plugin updater
- *
- * This script will look for plugin updates on GitHub.com
- *
- * @since   1.0.0
- * @package GitHubUserRepoWidget
- */
-function ja_github_repo_updater_init() {
-
-	include_once( 'updater.php' );
-
-	define( 'WP_GITHUB_FORCE_UPDATE', true );
-
-	if ( is_admin() ) {
-
-		$config = array(
-			'slug'               => plugin_basename(__FILE__),
-			'proper_folder_name' => 'github-user-repo-widget',
-			'api_url'            => 'https://api.github.com/repos/jaredatch/GitHub-User-Repo-Widget',
-			'raw_url'            => 'https://raw.github.com/jaredatch/GitHub-User-Repo-Widget/master',
-			'github_url'         => 'https://github.com/jaredatch/GitHub-User-Repo-Widget',
-			'zip_url'            => 'https://github.com/jaredatch/GitHub-User-Repo-Widget/zipball/master',
-			'sslverify'          => true,
-			'requires'           => '3.4',
-			'tested'             => '3.5',
-			'readme'             => 'readme.txt',
-		);
-
-		new WPGitHubUpdater( $config );
-
-	}
-
-}
-add_action( 'init', 'ja_github_repo_updater_init' );
